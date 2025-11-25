@@ -1,0 +1,39 @@
+
+# Eclipse workspace metadata (never commit)
+
+.metadata/
+
+
+
+# Eclipse project specific
+
+.settings/
+
+.classpath
+
+.project
+
+
+
+# Build directories
+
+build/
+
+bin/
+
+target/
+
+
+
+# Logs
+
+*.log
+
+
+
+# OS junk
+
+.DS_Store
+
+Thumbs.db
+
