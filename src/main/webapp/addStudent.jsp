@@ -3,81 +3,94 @@
 <html>
 <head>
     <title>Add Student</title>
+
     <style>
 
         body {
             margin: 0;
             padding: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #eef1f7;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #4E54C8, #8F94FB);
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
         }
 
-        .form-container {
-            background: white;
+        .container {
+            width: 430px;
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
             padding: 35px 40px;
-            width: 420px;
-            border-radius: 14px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            animation: fadeIn 0.7s ease-in-out;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+            animation: fadeIn 0.8s ease-in-out;
         }
 
-        h3 {
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
             text-align: center;
-            font-size: 28px;
-            margin-bottom: 25px;
-            color: #4f46e5;
+            color: white;
+            font-size: 30px;
             font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        h2 span {
+            font-size: 32px;
         }
 
         label {
-            font-weight: 600;
-            color: #333;
-            display: block;
-            margin-bottom: 6px;
             font-size: 15px;
+            font-weight: 600;
+            color: #f0f0ff;
+            margin-bottom: 6px;
+            display: block;
         }
 
         input[type="text"],
         input[type="email"] {
             width: 100%;
-            padding: 12px;
-            font-size: 15px;
-            border: 1.5px solid #ccc;
-            border-radius: 8px;
+            padding: 13px;
+            margin-top: 6px;
             margin-bottom: 18px;
+            border-radius: 10px;
+            border: none;
+            background: #ffffff;
+            color: #333;
+            font-size: 15px;
             outline: none;
-            transition: 0.3s;
+            transition: 0.25s ease-in-out;
         }
 
         input:focus {
-            border-color: #4f46e5;
-            box-shadow: 0 0 5px rgba(79,70,229,0.3);
+            box-shadow: 0 0 10px rgba(255,255,255,0.6);
         }
 
         input[type="submit"] {
             width: 100%;
-            padding: 12px;
-            font-size: 16px;
+            padding: 14px;
+            background: #ffffff;
+            color: #4E54C8;
             border: none;
-            background: #4f46e5;
-            color: white;
-            border-radius: 8px;
-            font-weight: 600;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
+            transition: 0.3s ease;
+            margin-top: 5px;
+            margin-left: 10px;
         }
 
         input[type="submit"]:hover {
-            background: #4338ca;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
+            background: #e8e8ff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
         }
 
     </style>
@@ -85,9 +98,11 @@
 
 <body>
 
-    <div class="form-container">
+    <div class="container">
+        
         <form action="addStudent" method="post">
-            <h3>Add Student</h3>
+
+            <h2><span>➕</span> Add Student</h2>
 
             <label>Name</label>
             <input type="text" name="name" placeholder="Enter student name" required>
@@ -99,7 +114,9 @@
             <input type="text" name="course" placeholder="Enter course" required>
 
             <input type="submit" value="Add Student">
+
         </form>
+
     </div>
 
 </body>
