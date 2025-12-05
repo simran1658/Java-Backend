@@ -7,3 +7,4 @@
 A simple Java backend project using JDBC for database connectivity.  
 Includes basic CRUD operations, SQL queries, and database interactions using Java + MySQL.
 
+Learning...
